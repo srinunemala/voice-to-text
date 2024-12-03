@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech-to-Text App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100..800&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    
+    
+</head>
+<body>
+    <div id="loginPage" class="login-form">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="mainPage" style="display: none;">
+        <div class="navbar">
+            <h1>Speech-to-Text App</h1>
+            <button class="day-night-toggle" id="dayNightToggle" onclick="toggleDayNight()">🌞</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div class="container">
+            <textarea id="outputText" placeholder="Your speech text will appear here..."></textarea>
+            <div class="language-buttons">
+                <button onclick="changeLanguage('en')">English</button>
+                <button onclick="changeLanguage('te')">Telugu</button>
+                <button onclick="changeLanguage('hi')">Hindi</button>
+                <button onclick="changeLanguage('ta')">Tamil</button>
+                <button onclick="changeLanguage('ml')">Malayalam</button>
+                <button onclick="changeLanguage('kn')">Kannada</button>
+            </div>
+            <button onclick="copyText()">Copy</button>
+            <button onclick="undoText()">Undo</button>
+            <button onclick="redoText()">Redo</button>
+            <button onclick="eraseText()">Erase Last Letter</button>
+            <button onclick="clearText()">Clear All Text</button>
+            <button onclick="startListening()">Start Listening</button>
+            <button onclick="stopListening()">Stop Listening</button>
+            <button onclick="downloadPDF()">Download as PDF</button>
+            <div id="recordingTimer" class="timer" style="display: none;">Recording: 0s</div>
+        </div>
+
+        <footer>
+            Designed by <span>Srinu</span>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
+
+
